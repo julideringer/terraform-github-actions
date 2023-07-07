@@ -51,7 +51,7 @@ resource "aws_lambda_function" "terraform_lambda_func" {
  function_name                  = "auth_lambda_confirm_forgot_pw"
  role                           = "arn:aws:iam::416737519422:role/mube_authentication_lambda_role"
  handler                        = "lambda_function.lambda_handler"
- runtime                        = "python3.10"
+ runtime                        = "python3.9"
  environment {
     variables = {
       client_id = "i9mf5ov9e7k31ttm44fedokdv"
