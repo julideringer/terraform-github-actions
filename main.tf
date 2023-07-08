@@ -47,8 +47,8 @@ data "archive_file" "zip_the_lambda" {
 # Create a lambda function
 # In terraform ${path.module} is the current directory.
 resource "aws_lambda_function" "terraform_lambda_func" {
- filename                       = "${path.module}/python/auth_lambda_test.zip"
- function_name                  = "auth_lambda_confirm_forgot_pw"
+ filename                       = "${path.module}/python/auth_lambda_test_1.zip"
+ function_name                  = "auth_lambda_test_1"
  role                           = "arn:aws:iam::416737519422:role/mube_authentication_lambda_role"
  handler                        = "lambda_function.lambda_handler"
  runtime                        = "python3.9"
