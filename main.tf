@@ -9,8 +9,6 @@ terraform {
 
 provider "aws" {
   region     = "eu-west-1"
-  access_key = "AKIAWCB35447ENFKIKHR"
-secret_key = "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"
 }
 
 resource "aws_iam_role" "this" {
@@ -40,7 +38,7 @@ EOF
 data "archive_file" "zip_the_lambda" {
  type        = "zip"
  source_dir  = "${path.module}/python/"
- output_path = "${path.module}/python/auth_lambda_test.zip"
+ output_path = "${path.module}/python/auth_lambda_test_1.zip"
 }
 
 
